@@ -1,53 +1,53 @@
 [
     {
         "name": "bob",
-        "network": "10.141.0.0/16",
+        "cidr": "10.141.0.0/16",
         "subnets": [
             {
                 "name": "grace",
-                "network": "10.141.1.0/24",
+                "cidr": "10.141.1.0/24",
                 "subnets": [
                     {
                         "name": "pogo",
-                        "network": "10.141.1.0/25",
+                        "cidr": "10.141.1.0/25",
                         "subnets": []
                     },
                     {
                         "name": "mungo",
-                        "network": "10.141.2.0/24",
+                        "cidr": "10.141.2.0/24",
                         "subnets": []
                     }
                 ]
             },
             {
                 "name": "mary",
-                "network": "10.141.2.0/24",
+                "cidr": "10.141.2.0/24",
                 "subnets": []
             },
             {
                 "name": "sophie",
-                "network": "10.141.3.0/24",
+                "cidr": "10.141.3.0/24",
                 "subnets": []
             }
         ]
     },
     {
         "name": "barbera",
-        "network": "10.141.0.0/16",
+        "cidr": "10.141.0.0/16",
         "subnets": [
             {
                 "name": "chris",
-                "network": "10.141.1.0/24",
+                "cidr": "10.141.1.0/24",
                 "subnets": []
             },
             {
                 "name": "david",
-                "network": "10.141.2.0/24",
+                "cidr": "10.141.2.0/24",
                 "subnets": []
             },
             {
                 "name": "logan",
-                "network": "10.141.3.0/24",
+                "cidr": "10.141.3.0/24",
                 "subnets": []
             }
         ]

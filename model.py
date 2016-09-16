@@ -1,4 +1,5 @@
 import json
+import pprint
 
 class Network(object):
     def __init__(self):
@@ -20,13 +21,15 @@ class Network(object):
             return(networks_dict)
 
     def traverse(self, networks_dict):
-            if "subnets" in networks_dict:
-                for network_dict in networks_dict:
-                    print("doing something")
-                    network = Network()
-                    network.name = network_dict["name"]
-                    network.cidr = network_dict["cidr"]
-                    network.subnets = self.__class__().traverse(network_dict)
-                    network.subnets.append(network)
-
-                return network
+        for network_dict in networks_dict:
+            #pprint.pprint("+++++++++++++++++++++++++++++")
+            # network = Network()
+            #self.name = network_dict["name"]
+            #self.cidr = network_dict["network"]
+            #self.cidr = network_dict["network"]
+            self.name = network_dict['name']
+            self.cidr = network_dict['cidr']
+            self.subnets = self.__class__()
+            self.subnets.traverse(network_dict['subnets'])
+            #self.subnets.append(self)
+        print(self)

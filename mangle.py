@@ -8,5 +8,3 @@ if __name__ == '__main__':
     network = Network()
     foo = network.load_it()
     # output = network.traverse()
-    pprint.pprint(foo)
-    pprint.pprint(network)
