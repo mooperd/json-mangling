@@ -1,9 +1,7 @@
-import json
-import pprint
 
 class Network(object):
-    def __init__(self):
-        self.name = ""
+    def __init__(self, name):
+        self.name = name
         self.cidr = ""
         self.subnets = []
 
@@ -13,18 +11,22 @@ class Network(object):
             self.cidr,
             self.subnets,
         )
-
-    def load_it(self, **kwargs):
-        with open("mangle.json", "r") as network_file:
-            networks_dict = json.load(network_file)
-            self.traverse(networks_dict)
-            return(networks_dict)
+    """
+    def load_it(self, networks_dict):
+        self.name = networks_dict["name"]
+        self.cidr = networks_dict["cidr"]
+        try:
+            for network in networks_dict["subnet"]:
+                if "subnets" in network:
+                    self.traverse(network)
+        except TypeError:
+            pass
 
     def traverse(self, networks_dict):
-        for network_dict in networks_dict:
-
-            self.name = network_dict['name']
-            self.cidr = network_dict['cidr']
-            self.subnets = self.__class__(network_dict).traverse()
-
-        print(self)
+        #pprint.pprint(networks_dict)
+        network = Network()
+        self.name = networks_dict["name"]
+        self.cidr = networks_dict["cidr"]
+        self.subnet = network.traverse(networks_dict)
+        pprint.pprint(self)
+    """
