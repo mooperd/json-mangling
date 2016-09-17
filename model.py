@@ -22,14 +22,9 @@ class Network(object):
 
     def traverse(self, networks_dict):
         for network_dict in networks_dict:
-            #pprint.pprint("+++++++++++++++++++++++++++++")
-            # network = Network()
-            #self.name = network_dict["name"]
-            #self.cidr = network_dict["network"]
-            #self.cidr = network_dict["network"]
+
             self.name = network_dict['name']
             self.cidr = network_dict['cidr']
-            self.subnets = self.__class__()
-            self.subnets.traverse(network_dict['subnets'])
-            #self.subnets.append(self)
+            self.subnets = self.__class__(network_dict).traverse()
+
         print(self)
