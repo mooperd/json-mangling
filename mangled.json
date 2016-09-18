@@ -1,0 +1,55 @@
+[
+    {
+        "name": "bob",
+        "cidr": "10.141.0.0/16",
+        "subnets": [
+            {
+                "name": "grace",
+                "cidr": "10.141.1.0/24",
+                "subnets": [
+                    {
+                        "name": "pogo",
+                        "cidr": "10.141.1.0/25",
+                        "subnets": []
+                    },
+                    {
+                        "name": "mungo",
+                        "cidr": "10.141.2.0/24",
+                        "subnets": []
+                    }
+                ]
+            },
+            {
+                "name": "mary",
+                "cidr": "10.141.2.0/24",
+                "subnets": []
+            },
+            {
+                "name": "sophie",
+                "cidr": "10.141.3.0/24",
+                "subnets": []
+            }
+        ]
+    },
+    {
+        "name": "barbera",
+        "cidr": "10.141.0.0/16",
+        "subnets": [
+            {
+                "name": "chris",
+                "cidr": "10.141.1.0/24",
+                "subnets": []
+            },
+            {
+                "name": "david",
+                "cidr": "10.141.2.0/24",
+                "subnets": []
+            },
+            {
+                "name": "logan",
+                "cidr": "10.141.3.0/24",
+                "subnets": []
+            }
+        ]
+    }
+]
